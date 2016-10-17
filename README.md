@@ -1,7 +1,7 @@
 
 # Teradek Sputnik - Docker
 
-* `2.6.1`, `latest` (Dockerfile)
+* [`2.6.1`, `latest` (Dockerfile)](https://github.com/ljgago/teradek-sputnik/blob/master/Dockerfile)
 
 ### For use:
 
