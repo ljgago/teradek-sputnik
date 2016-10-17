@@ -6,7 +6,9 @@
 ### For use:
 
 ``` bash
-docker run -d -p 1957:1957 -p 5111:5111 -p 554:554 -v $DATA_FOLDER:/data/ -v $LOG_FOLDER:/var/log/ -it --name sputnik --restart=always ljgago/teradek-sputnik
+docker run -d -p 1957:1957 -p 5111:5111 -p 554:554 \
+-v $DATA_FOLDER:/data/ -v $LOG_FOLDER:/var/log/ \
+-it --name sputnik --restart=always ljgago/teradek-sputnik
 ```
 
 ### For webui go:
@@ -26,7 +28,9 @@ docker build -t teradek:sputnik:latest .
 ### Run the Sputnik container:
 
 ```
-docker run -d -p 1957:1957 -p 5111:5111 -p 554:554 $DATA_FOLDER:/data/ -v $LOG_FOLDER:/var/log/ -it --name sputnik --restart=always teradek-sputnik
+docker run -d -p 1957:1957 -p 5111:5111 -p 554:554 \
+-v $DATA_FOLDER:/data/ -v $LOG_FOLDER:/var/log/ \
+-it --name sputnik --restart=always teradek-sputnik
 ```
 
 ### If you need go inside the Sputnik image (the container must be running):
