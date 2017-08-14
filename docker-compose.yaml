@@ -1,0 +1,18 @@
+version: '2'
+
+services:
+  sputnik:
+    image: ljgago/teradek-sputnik
+    ports:
+      - "1957:1957"
+      - "5111:5111"
+      - "5111:5111/udp"
+      - "554:554"
+      - "554:554/udp"
+      - "5000:5000"
+      - "5000:5000/udp"
+      - "9710:9710"
+      - "9710:9710/udp"
+      - "9720:9720"
+      - "9720:9720/udp"
+    restart: always

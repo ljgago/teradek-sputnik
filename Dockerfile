@@ -1,14 +1,18 @@
-FROM debian:jessie
+FROM debian:stretch
 
-ENV TERADEK_SPUTNIK teradek-sputnik_2.6.1.r27115_amd64.deb
-
-ADD ./$TERADEK_SPUTNIK /usr/local/
+ENV MAJOR_VERSION 2.7.x
+ENV VERSION 2.7.3
+ENV RELEASE r28994
+ENV TERADEK_SPUTNIK teradek-sputnik_${VERSION}.${RELEASE}_amd64.deb
 
 RUN dpkg --add-architecture i386 \
     && apt-get update \
     && apt-get upgrade -y \
-    && apt-get install -y libc6-i386 lib32stdc++6 lib32z1 lib32gcc1 \
-    && dpkg -i /usr/local/$TERADEK_SPUTNIK
+    && apt-get install -y libc6-i386 lib32stdc++6 lib32z1 lib32gcc1 wget
+
+RUN wget http://update.teradek.com/download.php?file=/Teradek/Sputnik/Software/Releases/$MAJOR_VERSION/$VERSION/$TERADEK_SPUTNIK -O /usr/local/$TERADEK_SPUTNIK
+
+RUN dpkg -i /usr/local/$TERADEK_SPUTNIK
 
 # Create volume friendly data directory
 RUN mkdir -p /data/conf
