@@ -1,8 +1,8 @@
 FROM debian:stretch
 
-ENV MAJOR_VERSION 2.7.x
-ENV VERSION 2.7.3
-ENV RELEASE r28994
+ENV MAJOR_VERSION 2.8.x
+ENV VERSION 2.8.0
+ENV RELEASE r29346
 ENV TERADEK_SPUTNIK teradek-sputnik_${VERSION}.${RELEASE}_amd64.deb
 
 RUN dpkg --add-architecture i386 \
