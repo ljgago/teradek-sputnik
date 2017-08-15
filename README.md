@@ -1,7 +1,9 @@
 
 # Teradek Sputnik - Docker
 
-* [`2.6.1`, `latest` (Dockerfile)](https://github.com/ljgago/teradek-sputnik/blob/master/Dockerfile)
+* [`2.8.0`, `latest` (Dockerfile)](https://github.com/ljgago/teradek-sputnik/blob/6f324f3de4e1952450e3f292a24ab389be46b5f8/Dockerfile)
+* [`2.7.3`, (Dockerfile)](https://github.com/ljgago/teradek-sputnik/blob/7cf30527c1b2d7d98ba44edb63b714a2e2eab60f/Dockerfile)
+* [`2.6.1`, (Dockerfile)](https://github.com/ljgago/teradek-sputnik/blob/55e8b570ff8b8ea91f2deefea77695f62f5266f0/Dockerfile)
 
 ### For use:
 
@@ -11,7 +13,7 @@ docker run -d -p 1957:1957 -p 5111:5111 -p 554:554 \
 -it --name sputnik --restart=always ljgago/teradek-sputnik
 ```
 
-### For webui go:
+### For WebUI go:
 
 ``` html
 http://your-ip:1957
@@ -37,13 +39,5 @@ docker run -d -p 1957:1957 -p 5111:5111 -p 554:554 \
 
 ```
 docker exec -it sputnik /bin/bash
-```
-
-You can get Teradek Sputnik install from here:
-
-``` bash
-file = teradek-sputnik_2.6.1.r27115_amd64.deb
-md5sum = 96d45748c49c333898c570d1d13d2402
-link = https://mega.nz/#!5RVQxAxB!-vFyYWVOLQtGxZ2ZVyyYUOuxDsZU2twlxtXLuS9EiWk
 ```
 
